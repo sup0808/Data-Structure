@@ -1,5 +1,11 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
+
+java -cp /tmp/LjO7tCKPzx/HelloWorld
+Input Array -----[1, 2, 3, 2, 1, 7, 56, 8, 76]
+Shuffled array ------ [76, 56, 1, 7, 1, 8, 3, 2, 2]
+
+	
 import java.util.Random;
 import java.util.Arrays;
 
