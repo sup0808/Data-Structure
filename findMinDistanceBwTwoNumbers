@@ -1,0 +1,28 @@
+
+
+import java.lang.Math;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+       
+        findMinDistanceBwTwoNumbers();
+    }
+    
+    public static void findMinDistanceBwTwoNumbers(){
+         int[] arr = {2,3,10,6,4,8,6,1};
+         int x = 2, y= 6;
+        
+        int minDistance =0;
+        for(int i = 0;i < arr.length; i++){
+            for(int j = i+1;j < arr.length; j++){
+            if((x == arr[i] && y == arr[j]) 
+             && (x == arr[i] && y == arr[j])
+             && (minDistance< Math.abs(i-j))){
+                 minDistance = Math.abs(i-j);
+             }
+         }
+        }
+        System.out.println(" Minimum Distance == "+minDistance);
+    }
+}
