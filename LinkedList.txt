@@ -1,0 +1,40 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        LinkedList list = new LinkedList();
+        Node firstHead = new Node(1);
+        Node second = new Node(2);
+        Node third = new Node(3);
+        list.head = firstHead;
+        firstHead.next = second;
+        second.next = third;
+        printList(list.head);
+    }
+    
+     public static void printList(Node head){
+        Node n = head;
+        while(n !=null){
+            System.out.println(n.data);
+            n = n.next;
+        }
+    }
+    
+    
+}
+ class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data = data;
+        }
+        
+    }
+
+class LinkedList{
+    Node head;
+    
+}
+
