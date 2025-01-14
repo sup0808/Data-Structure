@@ -1,0 +1,19 @@
+fun main() {
+  val str = "supriya gupta arvind gupta shreeja gupta shresth gupta supriya"
+   countWordsMethod2(str)
+}
+
+fun countWordsMethod1(str : String){
+    
+    val wordsArray = str.split(" ")
+    println("Words count in string ${wordsArray.size}")
+}
+
+fun countWordsMethod2(str : String){
+    var count = 1
+    for(i in 0..str.length-1){
+        if(str.get(i) == ' ')
+        count++
+    }
+    println("Words count in string ${count}")
+}
