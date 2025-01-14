@@ -1,0 +1,25 @@
+fun main() {
+    reverseMethod2()
+    
+    println("Reverse--- ${recursionMethod("supriya")}")
+}
+
+fun reverseMethod1(){
+    val name = "supriya"
+    println("Reverse string : ${name.reversed()}")
+}
+
+fun reverseMethod2(){
+    val name = "supriya"
+    for(i in name.length-1 downTo 0){
+        print(name.get(i))
+    }
+}
+
+fun recursionMethod(str : String) : String{
+    return if(str.length==1){
+        str
+    }else{
+        str.get(str.length-1) + recursionMethod(str.substring(0, str.length-1)) 
+    }
+}
