@@ -1,0 +1,13 @@
+fun main() {
+ swap()
+}
+
+fun swap(){
+    var a=20 
+    var b = 30 
+    println("Before swap a = $a b = $b")
+    a = a+b
+    b = a-b
+    a = a-b
+    println("After swap a = $a b = $b")
+}
