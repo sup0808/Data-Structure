@@ -1,0 +1,21 @@
+fun main() {
+  val str = "supriya gupta arvind gupta shreeja gupta shresth gupta supriya"
+   removeDuplicateWords(str)
+}
+
+fun removeDuplicateWords(str : String){
+    
+    val wordsArray = str.split(" ")
+    val map = mutableMapOf<String,Int>()
+    
+   	wordsArray.forEach{word ->
+        map[word] = 1
+    }
+    
+    val wordSet = map.keys
+    
+    println("Removed duplicated")
+    for(word in wordSet){
+       println("$word ")
+    }
+}
