@@ -1,0 +1,24 @@
+fun main() {
+  val str = "supriya gupta"
+   findVowelsConsonants(str)
+}
+
+
+fun findVowelsConsonants(str : String){
+    var vowel =0
+    var consonants =0
+    for(i in 0..str.length-1){
+        if(str.get(i) == 'a'||  
+           str.get(i) == 'i' || 
+           str.get(i) == 'e'|| 
+           str.get(i) == 'o'|| 
+           str.get(i) == 'u' )
+        vowel++
+        else 
+        consonants++
+        
+    }
+    println("Vowels occurence ---  $vowel")
+    println("consonants occurence ---  $consonants")
+    
+}
