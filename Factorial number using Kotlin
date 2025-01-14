@@ -1,0 +1,11 @@
+fun main() {
+   factorial(4)
+}
+
+fun factorial(n : Int){
+    var fact=1 
+    for(i in 1..n){
+        fact =fact*i
+    }
+    println("factorial :: $fact")
+}
