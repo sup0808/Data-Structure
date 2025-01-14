@@ -1,0 +1,23 @@
+fun main() {
+  val str = "supriya gupta arvind gupta shreeja gupta shresth gupta supriya"
+   printOccurenceOfChar(str)
+}
+
+fun printOccurenceOfChar(str : String){
+    var charArray = str.toCharArray()
+    
+    val map = mutableMapOf<Char,Int>()
+    
+    charArray.forEach{ch ->
+        if(map.contains(ch))
+            map[ch] = map[ch]!! + 1
+        else
+            map[ch] = 1
+     }
+    
+    val charSet = map.keys
+    
+    for(character  in charSet){
+        println("$character -- ${map[character]}")
+    }
+}
