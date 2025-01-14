@@ -1,0 +1,30 @@
+fun main() {
+  val str = "supriya gupta arvind gupta shreeja gupta shresth gupta supriya"
+   printDuplicateWords(str)
+}
+
+
+    fun printDuplicateWords(str: String) {
+
+        val wordsArray = str.split(" ")
+
+        val map = mutableMapOf<String, Int>()
+        for (word: String in wordsArray) {
+            if (map.contains(word)) {
+                map[word.lowercase()] = map[word]!! + 1
+
+            } else {
+                map[word.lowercase()] = 1
+            }
+        }
+
+        var wordsSet = map.keys
+
+        for (word: String in wordsSet) {
+            if (map[word]!! > 1) {
+                println("Duplicate Words :: $word ${map.get(word)}")
+            } else {
+                println(" Words :: $word ${map.get(word)}")
+            }
+        }
+    }
