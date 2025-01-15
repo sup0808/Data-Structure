@@ -1,0 +1,18 @@
+fun main() {
+ permutation(" ","jsp")
+}
+
+fun permutation(permutaion : String, input : String){
+    if(input.length == 0){
+        println("$permutaion ")
+    }
+    else{
+        for(i in 0..input.length-1){
+            val ch = input[i]
+            
+            val rest = input.substring(0,i) + input.substring(i+1)
+            
+            permutation(permutaion+ch , rest)
+        }
+    }
+}
