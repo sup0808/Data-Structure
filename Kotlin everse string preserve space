@@ -1,0 +1,23 @@
+fun main() {
+  val str = "supriya gupta arvind gupta shreeja gupta shresth gupta supriya"
+   println("reverse --- ${reverse(str)}")
+}
+
+fun reverseStringPrserveSpace(str : String){
+    val wordsArray = str.split(" ")
+    wordsArray.forEach{word->
+       val reverseStr = reverse(word)
+       print("$reverseStr ")
+    }
+    
+}
+
+fun reverse(str : String) : String{
+   
+   return if(str.length==1){
+        str
+   }
+   else{
+       str.get(str.length-1) +    reverse(str.substring(0,str.length-1))
+   }
+}
