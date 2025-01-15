@@ -1,0 +1,22 @@
+fun main() {
+	getSecondLargest()
+}
+
+fun getSecondLargest() {
+    val arr = intArrayOf(2,3,1,8,90,65,76)
+    var largest = Integer.MIN_VALUE
+    var secondLargest = Integer.MIN_VALUE
+    
+    for(i in 0..arr.size-1){
+        if(arr[i]>largest){
+            largest = arr[i]
+            secondLargest = largest
+        }
+        else{
+            secondLargest = arr[i]
+        }
+    }
+    println("largest $largest")
+    println("secondLargest $secondLargest")
+}
+
