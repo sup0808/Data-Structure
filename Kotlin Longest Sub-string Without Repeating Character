@@ -1,0 +1,26 @@
+fun main() {
+	swapString("stackoverflow")
+}
+
+fun longestSTring(input : String){
+ 
+    var sets = mutableSetOf<Char>()
+    var longestStringTillNow = ""
+    var longestStringOverall = ""
+    
+    for(i in 0..input.length-1){
+        if(sets.contains(input[i])){
+            sets.clear()
+            longestStringTillNow =""
+        }
+        sets.add(input[i])
+        longestStringTillNow = longestStringTillNow + input[i]
+        
+        if(longestStringTillNow.length > longestStringOverall.length){
+            longestStringOverall = longestStringTillNow
+        }
+    }
+    
+    println("-- $longestStringOverall")
+  }
+
