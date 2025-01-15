@@ -1,0 +1,13 @@
+  val str = "supriya gupta arvind gupta shreeja gupta shresth gupta supriya"
+    reverseWords(str)
+   }
+
+fun reverseWords(str : String){
+    val wordsArray = str.toCharArray()
+    
+    for(i in wordsArray.size-1 downTo 0){
+        print("${wordsArray[i]}")
+    }
+    
+}
+
