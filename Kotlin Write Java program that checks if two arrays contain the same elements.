@@ -1,0 +1,25 @@
+fun main() {
+ println("Elements are ${isSameElements()}")
+}
+
+fun isSameElements() : Boolean {
+    val arr = intArrayOf(1, 2, 3, 4, 4,2)
+   val arr1 = intArrayOf(1,2,3,4,7)
+   
+   var set1 = arr.toSet()
+   var set2 = arr1.toSet()
+   var flag = true
+   if(set1.size!= set2.size){
+      flag = false
+   }
+   
+   set1.forEach{
+       item ->
+       if(!set2.contains(item)){
+         flag = false
+           
+       }
+   }
+   return flag
+}
+
