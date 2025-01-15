@@ -1,0 +1,14 @@
+fun main() {
+	missingNumber()
+}
+
+fun missingNumber() {
+    val arr = intArrayOf(1, 2, 3, 4, 6, 7, 8, 9, 10)
+    println("Input Array ---- ${arr.joinToString(", ")}")
+    val n = arr.size + 1
+    var total = n * (n + 1) / 2
+    for (i in arr.indices) {
+        total -= arr[i]
+    }
+    println("Missing Number in Array ---- $total")
+}
