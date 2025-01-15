@@ -1,0 +1,15 @@
+fun main() {
+	swapString()
+}
+
+fun swapString(){
+    var s1 = "supriya"
+    var s2 = "gupta"
+    
+    s1= s1 + s2
+    s2 = s1.substring(0,s1.length - s2.length)
+    s1 = s1.substring(s2.length)
+    
+    println("S1 --  $s1")
+    println("S2 --  $s2")
+ }
