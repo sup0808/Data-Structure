@@ -1,0 +1,25 @@
+fun main() {
+    val arr :IntArray = intArrayOf(2,7,11,8,90,65,2,76)
+	findHighestLowestIndex(arr,2)
+}
+
+fun findHighestLowestIndex(arr : IntArray, input:Int) {
+ 
+    println("Arrays -- ${arr.joinToString(",")}")
+    var low=0
+    var high =0
+    
+    for(i in 0 until arr.size){
+        if(arr[i] == input){
+            if(i<low){
+                low = i
+            }
+            if(i>high){
+                high = i
+            }
+        }
+    }
+    println("low $low")
+     println("high $high")
+   	
+  }
