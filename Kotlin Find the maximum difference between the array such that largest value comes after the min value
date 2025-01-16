@@ -1,0 +1,25 @@
+fun main() {
+    val arr :IntArray = intArrayOf(2,3,10,6,4,8)
+	MaxSumOfSubArray(arr,2)
+}
+
+fun MaxSumOfSubArray(arr : IntArray, input:Int) {
+ 
+    println("Arrays -- ${arr.joinToString(",")}")
+    var minValue = arr[0]
+    var maxDiff = arr[1]-arr[0]
+    
+    for(i in 0 until arr.size){
+       
+        if(arr[i]<minValue){
+            minValue = arr[i]
+        }
+        else{
+            var diff = arr[i] - minValue
+            if(maxDiff<diff){
+                maxDiff = diff
+            }
+        }
+     }
+    println("max sumarry $maxDiff")
+}
