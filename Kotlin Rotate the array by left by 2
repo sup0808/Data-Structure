@@ -1,0 +1,20 @@
+fun main() {
+    val arr :IntArray = intArrayOf(2,7,0,8,90,65,76)
+	raoateArrayByLeft(arr,2)
+}
+
+fun raoateArrayByLeft(arr : IntArray, d : Int) {
+ 
+    println("Arrays -- ${arr.joinToString(",")}")
+   
+    for(i in 0 until d){
+      	val j=0
+        val temp = arr[i]
+        
+        for(j in 0 until arr.size-1){
+            arr[j] = arr[j+1]
+        }
+        arr[j] = temp
+    }
+    println("Rotate Arrays -- ${arr.joinToString(",")}")
+  }
