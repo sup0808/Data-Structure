@@ -1,0 +1,17 @@
+fun main() {
+    val arr :IntArray = intArrayOf(2,3,10,6,4,8)
+	
+    println("Element out at index ${linearSearch(arr,11)}")
+}
+
+fun linearSearch(arr : IntArray, input:Int): Int {
+ 
+    println("Arrays -- ${arr.joinToString(",")}")
+   	var index = -1
+   	for(i in 0 until arr.size){
+        if(arr[i] == input)
+        index = i
+        
+    }
+    return index
+  }
