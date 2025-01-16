@@ -1,0 +1,32 @@
+fun main() {
+   var list = LinkedList()
+   var first = Node(1)
+   var second = Node(2)
+   var third = Node(3)
+  
+    list.head =  first
+    first.next = second
+    second.next = third
+    
+    printNode(list.head)
+}
+
+
+fun printNode(head : Node?){
+    
+    var n = head
+    while(n!=null){
+         println(n.datas)
+        n = n.next
+ 
+    }
+   
+}
+
+class Node(var datas : Int){
+    var next : Node? = null
+}
+
+class LinkedList{
+  var head : Node? = null
+}
