@@ -1,0 +1,25 @@
+fun main() {
+    val arr :IntArray = intArrayOf(2,3,10,6,4,8)
+	
+    println("Element out at index ${binarySearch(arr,10)}")
+}
+
+fun binarySearch(arr: IntArray,  key: Int): Int {
+    var low = 0
+    var high = arr.size-1
+    var mid = (low + high) / 2
+    while (low <= high) {
+        if (arr[mid] < key) {
+            low = mid + 1
+        } else if (arr[mid] > key) {
+            high = mid - 1
+        } else {
+            return mid
+        }
+        mid = (low + high) / 2
+    }
+    if (low > high) {
+        return -1
+    }
+    return -1
+}
