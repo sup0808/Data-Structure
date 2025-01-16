@@ -1,0 +1,27 @@
+fun main() {
+    val arr :IntArray = intArrayOf(2,7,11,8,90,65,76)
+	rotateArrayByRight(arr,2)
+}
+
+fun reverse(arr : IntArray, s : Int, e : Int){
+    var temp =0
+    var start= s
+   var end =e
+    while(start<end){
+        temp = arr[start]
+        arr[start] = arr[end]
+        arr[end] = temp
+        start++
+        end--
+    }
+}
+
+fun rotateArrayByRight(arr : IntArray, d : Int) {
+ 
+    println("Arrays -- ${arr.joinToString(",")}")
+   	reverse(arr, 0, arr.size-1)
+    reverse(arr, 0, d-1)
+    reverse(arr, d, arr.size-1)
+    
+    println("Rotate Arrays -- ${arr.joinToString(",")}")
+  }
